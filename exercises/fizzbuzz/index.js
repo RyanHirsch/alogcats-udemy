@@ -12,6 +12,13 @@
 //   4
 //   buzz
 
-function fizzBuzz(n) {}
+function fizzBuzz(n) {
+  for (let i = 1; i <= n; i++) {
+    const is3Mult = i % 3 === 0;
+    const is5Mult = i % 5 === 0;
+    const log = `${is3Mult ? "fizz" : ""}${is5Mult ? "buzz" : ""}`;
+    console.log(log || i);
+  }
+}
 
 module.exports = fizzBuzz;
